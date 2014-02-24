@@ -1,4 +1,12 @@
-olpc-teacher-update
+One Laptop Per Child: Easy Firmware Update
 ===================
 
-This script is designed for teachers needing to automatically upgrade their XO devices firmware.
+Purpose
+-------
+This script is designed to be a simple and easy method for teachers needing to automatically upgrade their XO devices firmware.
+
+How To Use
+----------
+ 1. Name the new firmware **fs.zd**, then place it on the root directory of a USB device.
+ 2. Name this script **olpc.fth**, then place it inside a directory located at **/boot/** on the USB device.
+ 3. Plug the usb into your XO device, power it on then follow the on screen instructions.
