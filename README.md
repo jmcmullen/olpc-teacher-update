@@ -1,4 +1,4 @@
-One Laptop Per Child: Easy Firmware Update
+OLPC: Easy Firmware Update
 ===================
 
 Purpose
