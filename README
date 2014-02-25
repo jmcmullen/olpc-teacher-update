@@ -1,9 +1,9 @@
-OLPC: Easy Firmware Update
+OLPC: Easy Firmware Update 
 ===================
 
 Purpose
 -------
-This script is designed to be a simple and easy method for teachers needing to automatically upgrade their XO devices firmware.
+This script is designed to be a simple and easy method for teachers needing to automatically upgrade their XO devices firmware. Once a USB is correctly configured, it can update the firmware on boot.
 
 How To Use
 ----------
