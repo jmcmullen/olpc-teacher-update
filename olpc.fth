@@ -1,5 +1,5 @@
 \ Automagically Upgrade XO Firmware
-\ Author: Jay McMullen
+\ Author: Jay McMullen - @jmcmullen
  
 \ Location to look for the new firmware
 : path$  " u:\fs.zd"  ;
