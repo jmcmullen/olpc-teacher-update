@@ -32,9 +32,68 @@
    then
 ;
  
-\ Warn the user before they delete everything
+\ Pretty splash screen (XO-SYS 1b)
 visible
+page
 ."  " cr
+."  " cr
+."  " cr
+."  " cr
+."  " cr
+."              __   __  _______             _______  __   __  _______ " cr
+50 MS
+."             |  |_|  ||       |           |       ||  | |  ||       |" cr
+50 MS
+."             |       ||   _   |   ____    |  _____||  |_|  ||  _____|" cr
+50 MS
+."             |       ||  | |  |  |____|   | |_____ |       || |_____ " cr
+50 MS
+."              |     | |  |_|  |           |_____  ||_     _||_____  |" cr
+50 MS
+."             |   _   ||       |            _____| |  |   |   _____| |" cr
+50 MS
+."             |__| |__||_______|           |_______|  |___|  |_______|" cr
+50 MS
+."                                  ____   _______                       " cr
+50 MS
+."                                 |    | |  _    |                      " cr
+50 MS
+."                                  |   | | |_|   |                      " cr
+50 MS
+."                                  |   | |       |                      " cr
+50 MS
+."                                  |   | |  _   |                       " cr
+50 MS
+."                                  |   | | |_|   |                      " cr
+50 MS
+."                                  |___| |_______|                      " cr
+50 MS
+."  " cr
+50 MS
+."                       One Laptop Per Child: Software Update " cr
+50 MS
+."                                   Please Wait... " cr
+2000 MS
+
+
+\ Warn the user before they delete everything
+page
+."   System Update: Are You Sure? " cr
+."  =============================================================================" cr
+." " cr
+."                               .----------------.  " cr
+."                              | .--------------. | " cr
+."                              | |      _       | | " cr
+."                              | |     | |      | | " cr
+."                              | |     | |      | | " cr
+."                              | |     |_|      | | " cr
+."                              | |      _       | | " cr
+."                              | |     (_)      | | " cr
+."                              | |              | | " cr
+."                              | '--------------' | " cr
+."                               '----------------'  " cr
+."                                                   " cr 
+."                                                   " cr 
 ."  WARNING: Updating this OS image will erase all data on this XO. " cr
 ."  Please ensure you back-up any important files before proceeding. " cr cr
  
@@ -45,19 +104,33 @@ visible
  
 ."  The OS image update process should take no more than 10 minutes to complete." cr
 ."  If you still wish to proceed, please press the 'j' key." cr
+."  " cr
  
 \ Wait for user confirmation before starting
 begin  key  [char] j  =  until
 page
- 
+
+."   System Update: Updating Your Software Now... " cr
+."  =============================================================================" cr
+." " cr
 do-os-update
 page
  
 \ Let the user know the process is complete
-." " cr
-."  Your OS image  was successfully updated!" cr
-."  To start using your device, you should:" cr
-."   - Remove the USB stick from the XO device." cr
-."   - Hold down the power button until the XO device turns off" cr
-."   - Press the power button to restart the device"
+."   System Update: Update Complete! " cr
+."  =============================================================================" cr
+."                                                                            " cr
+."                                                            _____           " cr
+."                                                         .-'     '-.        " cr
+."   Your OS image  was successfully updated!            .'           `.      " cr
+."                                                      /   .      .    \     " cr
+."                                                     :                 :    " cr
+."   To start using your device, you should:           |                 |    " cr
+."     - Remove the USB stick from the XO device.      :   \        /    :    " cr
+."     - Hold down the power button until the XO        \   `.____.'    /     " cr
+."       device turns off.                               `.           .'      " cr
+."     - Press the power button to restart the device.     `-._____.-'        " cr
+."                                                                            " cr 
+."                                                                            " cr 
+."  " cr
 begin halt again
