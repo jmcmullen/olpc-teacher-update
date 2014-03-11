@@ -70,7 +70,7 @@ page
 50 MS
 ."  " cr
 50 MS
-."                       One Laptop Per Child: Software Update " cr
+."                                XO System 1b Update " cr
 50 MS
 ."                                   Please Wait... " cr
 2000 MS
