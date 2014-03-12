@@ -94,7 +94,7 @@ page
 ."                               '----------------'  " cr
 ."                                                   " cr 
 ."                                                   " cr 
-."  WARNING: Updating this OS image will erase all data on this XO. " cr
+."  WARNING: Updating this OS (Operating System) image will erase all data on this XO. " cr
 ."  Please ensure you back-up any important files before proceeding. " cr cr
  
 ."  If you do not wish to update your XO OS image right now you should: " cr
