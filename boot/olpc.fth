@@ -94,8 +94,9 @@ page
 ."                               '----------------'  " cr
 ."                                                   " cr 
 ."                                                   " cr 
-."  WARNING: Updating this OS (Operating System) image will erase all data on this XO. " cr
-."  Please ensure you back-up any important files before proceeding. " cr cr
+."  WARNING: Updating this OS (Operating System) image will erase all data on " cr
+."  this xo. Please ensure you back-up any important files before proceeding. " cr
+."  It is also recomended you connect your devices charger for this update." cr cr
  
 ."  If you do not wish to update your XO OS image right now you should: " cr
 ."   -  Remove the USB stick from the XO device." cr
