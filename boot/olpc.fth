@@ -99,9 +99,9 @@ page
 ."  It is also recomended you connect your devices charger for this update." cr cr
  
 ."  If you do not wish to update your XO OS image right now you should: " cr
-."   -  Remove the USB stick from the XO device." cr
-."   -  Hold down the power button until the XO device turns off." cr
-."   -  Press the power button to restart your device." cr cr
+."   1.  Remove the USB stick from the XO device." cr
+."   2.  Hold down the power button until the XO device turns off." cr
+."   3.  Press the power button to restart your device." cr cr
  
 ."  The OS image update process should take no more than 10 minutes to complete." cr
 ."  If you still wish to proceed, please press the 'y' key." cr
