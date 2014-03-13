@@ -121,15 +121,15 @@ page
 ."  =============================================================================" cr
 ."                                                                            " cr
 ."                                                            _____           " cr
-."                                                         .-'     '-.        " cr
-."   Your OS image  was successfully updated!            .'           `.      " cr
+."   Your OS image  was successfully updated!              .-'     '-.        " cr
+."                                                       .'           `.      " cr
 ."                                                      /   .      .    \     " cr
-."                                                     :                 :    " cr
-."   To start using your device, you should:           |                 |    " cr
-."     - Remove the USB stick from the XO device.      :   \        /    :    " cr
-."     - Hold down the power button until the XO        \   `.____.'    /     " cr
-."       device turns off.                               `.           .'      " cr
-."     - Press the power button to restart the device.     `-._____.-'        " cr
+."    To start using your device, you should:          :                 :    " cr
+."     1. Remove the USB stick from the XO device.     |                 |    " cr
+."     2. Hold down the power button until the XO      :   \        /    :    " cr
+."        device is completly turned off.               \   `.____.'    /     " cr
+."     3. Press the power button to restart the device.  `.           .'      " cr
+."                                                         `-._____.-'        " cr
 ."                                                                            " cr 
 ."                                                                            " cr 
 ."  " cr
