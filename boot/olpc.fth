@@ -103,11 +103,11 @@ page
 ."   -  Press the power button to restart your device." cr cr
  
 ."  The OS image update process should take no more than 10 minutes to complete." cr
-."  If you still wish to proceed, please press the 'j' key." cr
+."  If you still wish to proceed, please press the 'y' key." cr
 ."  " cr
  
 \ Wait for user confirmation before starting
-begin  key  [char] j  =  until
+begin  key  [char] y  =  until
 page
 
 ."   System Update: Updating Your Software Now... " cr
