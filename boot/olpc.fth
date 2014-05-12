@@ -31,51 +31,38 @@
       path4$ $fs-update
    then
 ;
+
+\ Checks that their is enough battery to proceed.
+: bat-safe?
+   bat-soc@ h# 32 >  if
+        true 
+   else
+        page
+        red-letters
+      		."  " cr cr cr cr cr cr
+      		."                                 .----------------.  " cr
+      		."                                | .--------------. | " cr
+      		."                               || |           |||| | " cr
+      		."                                | '--------------' | " cr
+      		."                                 '----------------'  " cr cr cr
+        ."       For safety reasons, we require a battery that is at least 50% full. " cr
+        ."        Please charge your battery, or use a different one and try again. " cr cr
+        ."         Please remove your usb drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
+        key
+        power-off
+        false
+   then
+;
  
 \ Pretty splash screen (XO-SYS 1b)
 visible
+green-letters
 page
-."  " cr
-."  " cr
-."  " cr
-."  " cr
-."  " cr
-."              __   __  _______             _______  __   __  _______ " cr
-50 MS
-."             |  |_|  ||       |           |       ||  | |  ||       |" cr
-50 MS
-."             |       ||   _   |   ____    |  _____||  |_|  ||  _____|" cr
-50 MS
-."             |       ||  | |  |  |____|   | |_____ |       || |_____ " cr
-50 MS
-."              |     | |  |_|  |           |_____  ||_     _||_____  |" cr
-50 MS
-."             |   _   ||       |            _____| |  |   |   _____| |" cr
-50 MS
-."             |__| |__||_______|           |_______|  |___|  |_______|" cr
-50 MS
-."                                  ____   _______                       " cr
-50 MS
-."                                 |    | |  _    |                      " cr
-50 MS
-."                                  |   | | |_|   |                      " cr
-50 MS
-."                                  |   | |       |                      " cr
-50 MS
-."                                  |   | |  _   |                       " cr
-50 MS
-."                                  |   | | |_|   |                      " cr
-50 MS
-."                                  |___| |_______|                      " cr
-50 MS
-."  " cr
-50 MS
-."                                XO System 1b Update " cr
-50 MS
-."                                   Please Wait... " cr
+."  " cr cr cr cr cr cr cr cr cr cr cr
+."                             XO System 1b Update " cr
+."                                 Please Wait... " cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr
 2000 MS
-
-
+bat-safe? if
 \ Warn the user before they delete everything
 page
 ."   System Update: Are You Sure? " cr
@@ -88,15 +75,15 @@ page
 ."                              | |     | |      | | " cr
 ."                              | |     |_|      | | " cr
 ."                              | |      _       | | " cr
-."                              | |     (_)      | | " cr
+."                              | |     |_|      | | " cr
 ."                              | |              | | " cr
 ."                              | '--------------' | " cr
 ."                               '----------------'  " cr
 ."                                                   " cr 
 ."                                                   " cr 
 ."  WARNING: Updating this OS (Operating System) image will erase all data on " cr
-."  this xo. Please ensure you back-up any important files before proceeding. " cr
-."  It is also recomended you connect your devices charger for this update." cr cr
+."  this XO. Please ensure you back-up any important files before proceeding. " cr
+."  It is also recommended you connect your devices charger for this update." cr cr
  
 ."  If you do not wish to update your XO OS image right now you should: " cr
 ."   1.  Remove the USB stick from the XO device." cr
@@ -104,13 +91,12 @@ page
 ."   3.  Press the power button to restart your device." cr cr
  
 ."  The OS image update process should take no more than 10 minutes to complete." cr
-."  If you still wish to proceed, please press the 'y' key." cr
-."  " cr
+."  If you still wish to proceed, please press the 'y' key." cr cr cr
  
 \ Wait for user confirmation before starting
 begin  key  [char] y  =  until
 page
-
+then
 ."   System Update: Updating Your Software Now... " cr
 ."  =============================================================================" cr
 ." " cr
@@ -122,13 +108,13 @@ page
 ."  =============================================================================" cr
 ."                                                                            " cr
 ."                                                            _____           " cr
-."   Your OS image  was successfully updated!              .-'     '-.        " cr
+."   Your XO was successfully updated!                     .-'     '-.        " cr
 ."                                                       .'           `.      " cr
 ."                                                      /   .      .    \     " cr
 ."    To start using your device, you should:          :                 :    " cr
 ."     1. Remove the USB stick from the XO device.     |                 |    " cr
 ."     2. Hold down the power button until the XO      :   \        /    :    " cr
-."        device is completly turned off.               \   `.____.'    /     " cr
+."        device is completely turned off.              \   `.____.'    /     " cr
 ."     3. Press the power button to restart the device.  `.           .'      " cr
 ."                                                         `-._____.-'        " cr
 ."                                                                            " cr 
