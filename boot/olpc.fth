@@ -47,7 +47,7 @@
       		."                                 '----------------'  " cr cr cr
         ."       For safety reasons, we require a battery that is at least 50% full. " cr
         ."        Please charge your battery, or use a different one and try again. " cr cr
-        ."         Please remove your usb drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
+        ."         Please remove your USB drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
         key
         power-off
         false
@@ -83,10 +83,10 @@ page
 ."                                                   " cr 
 ."  WARNING: Updating this OS (Operating System) image will erase all data on " cr
 ."  this XO. Please ensure you back-up any important files before proceeding. " cr
-."  It is also recommended you connect your devices charger for this update." cr cr
+."  It is also recommended you connect the charger for this update." cr cr
  
-."  If you do not wish to update your XO OS image right now you should: " cr
-."   1.  Remove the USB stick from the XO device." cr
+."  If you do not wish to update the XO OS image right now you should: " cr
+."   1.  Remove the USB drive from the XO device." cr
 ."   2.  Hold down the power button until the XO device turns off." cr
 ."   3.  Press the power button to restart your device." cr cr
  
@@ -111,11 +111,11 @@ page
 ."   Your XO was successfully updated!                     .-'     '-.        " cr
 ."                                                       .'           `.      " cr
 ."                                                      /   .      .    \     " cr
-."    To start using your device, you should:          :                 :    " cr
-."     1. Remove the USB stick from the XO device.     |                 |    " cr
+."    To start using your laptop, you should:          :                 :    " cr
+."     1. Remove the USB drive from the XO device.     |                 |    " cr
 ."     2. Hold down the power button until the XO      :   \        /    :    " cr
-."        device is completely turned off.              \   `.____.'    /     " cr
-."     3. Press the power button to restart the device.  `.           .'      " cr
+."        laptop is completely turned off.              \   `.____.'    /     " cr
+."     3. Press the power button to restart the laptop.  `.           .'      " cr
 ."                                                         `-._____.-'        " cr
 ."                                                                            " cr 
 ."                                                                            " cr 
