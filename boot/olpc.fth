@@ -32,28 +32,34 @@
    then
 ;
 
-\ Checks that their is enough battery to proceed.
+\ Checks that there is enough battery to proceed.
 : bat-safe?
-   bat-soc@ h# 32 >  if
-        true 
-   else
-        page
-        red-letters
-      		."  " cr cr cr cr cr cr
-      		."                                 .----------------.  " cr
-      		."                                | .--------------. | " cr
-      		."                               || |           |||| | " cr
-      		."                                | '--------------' | " cr
-      		."                                 '----------------'  " cr cr cr
-        ."       For safety reasons, we require a battery that is at least 50% full. " cr
-        ."        Please charge your battery, or use a different one and try again. " cr cr
-        ."         Please remove your USB drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
-        key
-        power-off
-        false
-   then
+   bat-status@ dup 1 and        ( status present )
+   swap 4 and 0=                ( present not-critical-low )
+   bat-soc@  d# 50  >           ( present not-critical-low less-than-half )
+   and and                      ( safe? )
 ;
- 
+
+: .bat-unsafe
+   page
+   red-letters
+   ."  " cr cr cr cr cr cr
+   ."                                 .----------------.  " cr
+   ."                                | .--------------. | " cr
+   ."                               || |           |||| | " cr
+   ."                                | '--------------' | " cr
+   ."                                 '----------------'  " cr cr cr
+   ."       For laptop safety reasons, the battery must be at least 50% full. " cr
+   ."        Please charge your battery, or use a different one and try again. " cr cr
+   ."         Please remove your USB drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
+   key
+   power-off begin again
+;
+
+: ?bat-safe
+   bat-safe?  not  if  .bat-unsafe  then
+;
+
 \ Pretty splash screen (XO-SYS 1b)
 visible
 green-letters
@@ -62,7 +68,7 @@ page
 ."                             XO System 1b Update " cr
 ."                                 Please Wait... " cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr cr
 2000 MS
-bat-safe? if
+?bat-safe
 \ Warn the user before they delete everything
 page
 ."   System Update: Are You Sure? " cr
