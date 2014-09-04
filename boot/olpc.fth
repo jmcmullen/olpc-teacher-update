@@ -11,10 +11,10 @@
 : xo-version  ( -- n )  ofw-version$ drop 1+ c@ [char] 0 -  ;
 
 \ Detects the XO model
-: xo-1?  ( -- flag )  xo-version 2 =  ;
-: xo-1.5?  ( -- flag )  xo-version 3 =  ;
+: xo-1?     ( -- flag )  xo-version 2 =  ;
+: xo-1.5?   ( -- flag )  xo-version 3 =  ;
 : xo-1.75?  ( -- flag )  xo-version 4 =  ;
-: xo-4?  ( -- flag )  xo-version 7 =  ;
+: xo-4?     ( -- flag )  xo-version 7 =  ;
 
 \ Updates with the proper OS image
 : do-os-update
