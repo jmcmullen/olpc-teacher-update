@@ -1,7 +1,7 @@
-\ Automagically Upgrade XO Firmware
+\ Automagically Install XO Firmware Operating System
 \ Author: Jay McMullen - @jmcmullen
 
-\ Locations per XO model
+\ File names by XO model
 : path0$  " u:\fs0.img"  ;
 : path1$  " u:\fs1.zd"  ;
 : path2$  " u:\fs2.zd"  ;
@@ -16,8 +16,8 @@
 : xo-1.75?  ( -- flag )  xo-version 4 =  ;
 : xo-4?     ( -- flag )  xo-version 7 =  ;
 
-\ Updates with the proper OS image
-: do-os-update
+\ Installs the operating system image
+: do-os-install
    xo-1? if
       path0$ $copy-nand 
    then
@@ -100,7 +100,7 @@ then
 ."   System Update: Updating Your Software Now... " cr
 ."  =============================================================================" cr
 ." " cr
-do-os-update
+do-os-install
 page
  
 \ Let the user know the process is complete
