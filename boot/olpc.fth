@@ -1,7 +1,7 @@
-\ Automagically Upgrade XO Firmware
+\ Automagically Install XO Firmware Operating System
 \ Author: Jay McMullen - @jmcmullen
 
-\ Locations per XO model
+\ File names by XO model
 : path0$  " u:\fs0.img"  ;
 : path1$  " u:\fs1.zd"  ;
 : path2$  " u:\fs2.zd"  ;
@@ -11,13 +11,13 @@
 : xo-version  ( -- n )  ofw-version$ drop 1+ c@ [char] 0 -  ;
 
 \ Detects the XO model
-: xo-1?  ( -- flag )  xo-version 2 =  ;
-: xo-1.5?  ( -- flag )  xo-version 3 =  ;
+: xo-1?     ( -- flag )  xo-version 2 =  ;
+: xo-1.5?   ( -- flag )  xo-version 3 =  ;
 : xo-1.75?  ( -- flag )  xo-version 4 =  ;
-: xo-4?  ( -- flag )  xo-version 7 =  ;
+: xo-4?     ( -- flag )  xo-version 7 =  ;
 
-\ Updates with the proper OS image
-: do-os-update
+\ Installs the operating system image
+: do-os-install
    xo-1? if
       path0$ $copy-nand 
    then
@@ -47,7 +47,7 @@
       		."                                 '----------------'  " cr cr cr
         ."       For safety reasons, we require a battery that is at least 50% full. " cr
         ."        Please charge your battery, or use a different one and try again. " cr cr
-        ."         Please remove your usb drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
+        ."         Please remove your USB drive then press any key to shut-down." cr cr cr cr cr cr cr cr cr cr cr cr cr
         key
         power-off
         false
@@ -83,10 +83,10 @@ page
 ."                                                   " cr 
 ."  WARNING: Updating this OS (Operating System) image will erase all data on " cr
 ."  this XO. Please ensure you back-up any important files before proceeding. " cr
-."  It is also recommended you connect your devices charger for this update." cr cr
+."  It is also recommended you connect the charger for this update." cr cr
  
-."  If you do not wish to update your XO OS image right now you should: " cr
-."   1.  Remove the USB stick from the XO device." cr
+."  If you do not wish to update the XO OS image right now you should: " cr
+."   1.  Remove the USB drive from the XO device." cr
 ."   2.  Hold down the power button until the XO device turns off." cr
 ."   3.  Press the power button to restart your device." cr cr
  
@@ -100,7 +100,7 @@ then
 ."   System Update: Updating Your Software Now... " cr
 ."  =============================================================================" cr
 ." " cr
-do-os-update
+do-os-install
 page
  
 \ Let the user know the process is complete
@@ -111,11 +111,11 @@ page
 ."   Your XO was successfully updated!                     .-'     '-.        " cr
 ."                                                       .'           `.      " cr
 ."                                                      /   .      .    \     " cr
-."    To start using your device, you should:          :                 :    " cr
-."     1. Remove the USB stick from the XO device.     |                 |    " cr
+."    To start using your laptop, you should:          :                 :    " cr
+."     1. Remove the USB drive from the XO device.     |                 |    " cr
 ."     2. Hold down the power button until the XO      :   \        /    :    " cr
-."        device is completely turned off.              \   `.____.'    /     " cr
-."     3. Press the power button to restart the device.  `.           .'      " cr
+."        laptop is completely turned off.              \   `.____.'    /     " cr
+."     3. Press the power button to restart the laptop.  `.           .'      " cr
 ."                                                         `-._____.-'        " cr
 ."                                                                            " cr 
 ."                                                                            " cr 
