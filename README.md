@@ -13,7 +13,5 @@ How To Use
 
 Naming Convention
 -----------------
- * For a XO-1 name it **fs0.img**.
- * For a XO-1.5 name it **fs1.zd**.
- * For a XO-1.75 name it **fs2.zd**.
- * For a XO-4 name it **fs4.zd**.
+ * For a Teacher (unlocked) edition name it **teacher.zd**.
+ * For a Student (no play store) name it **student.zd**.
